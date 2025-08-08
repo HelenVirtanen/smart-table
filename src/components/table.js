@@ -13,6 +13,18 @@ export function initTable(settings, onAction) {
 
   // @todo: #1.2 —  вывести дополнительные шаблоны до и после таблицы
 
+  const reversedBefore = before.slice().reverse(); 
+  
+  reversedBefore.forEach((id) => {
+    root[id] = cloneTemplate(id);
+    root.container.prepend(root[id].container);
+  });
+
+  after.forEach((id) => {
+    root[id] = cloneTemplate(id);
+    root.container.append(root[id].container);
+  });
+
   // @todo: #1.3 —  обработать события и вызвать onAction()
 
   const render = (data) => {
