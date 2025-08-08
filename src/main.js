@@ -10,6 +10,7 @@ import {initTable} from "./components/table.js";
 // @todo: подключение
 
 
+
 // Исходные данные используемые в render()
 const {data, ...indexes} = initData(sourceData);
 
@@ -42,7 +43,7 @@ const sampleTable = initTable({
     tableTemplate: 'table',
     rowTemplate: 'row',
     before: [],
-    after: []
+    after: ['pagination']
 }, render);
 
 // @todo: инициализация
