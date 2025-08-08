@@ -9,6 +9,7 @@ import { processFormData } from "./lib/utils.js";
 import { initTable } from "./components/table.js";
 // @todo: подключение
 import { initPagination } from "./components/pagination.js";
+import { initSorting } from "./components/sorting.js";
 
 // Исходные данные используемые в render()
 const { data, ...indexes } = initData(sourceData);
