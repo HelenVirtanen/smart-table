@@ -19,9 +19,13 @@ const { data, ...indexes } = initData(sourceData);
  */
 function collectState() {
   const state = processFormData(new FormData(sampleTable.container));
+  const rowsPerPage = parseInt(state.rowsPerPage);
+  const page = parseInt(state.page ?? 1);
 
   return {
     ...state,
+    rowsPerPage,
+    page,
   };
 }
 
