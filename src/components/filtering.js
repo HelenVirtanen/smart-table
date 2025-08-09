@@ -8,7 +8,6 @@ export function initFiltering(elements, indexes) {
   Object.keys(indexes).forEach((elementName) => {
     elements[elementName].append(
       ...Object.values(indexes[elementName]).map((name) => {
-        console.log(name);
         const option = document.createElement("option");
         option.value = name;
         option.textContent = `${name}`;
