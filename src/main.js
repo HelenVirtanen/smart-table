@@ -63,10 +63,6 @@ const sampleTable = initTable(
 // @todo: инициализация
 const applySearching = initSearching("search");
 
-const applyFiltering = initFiltering(sampleTable.filter.elements, {
-  searchBySeller: indexes.sellers
-});
-
 const applySorting = initSorting([
     sampleTable.header.elements.sortByDate,
     sampleTable.header.elements.sortByTotal
@@ -89,6 +85,9 @@ appRoot.appendChild(sampleTable.container);
 
 async function init() {
   const indexes = await api.getIndexes();
+  const applyFiltering = initFiltering(sampleTable.filter.elements, {
+  searchBySeller: indexes.sellers
+  });
 }
 
 init().then(render);
