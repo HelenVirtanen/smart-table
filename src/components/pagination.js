@@ -51,8 +51,15 @@ export const initPagination = (
     );
 
     // @todo: #2.5 (rowsPerPage заменена на limit)
-    fromRow.textContent = (page - 1) * limit + 1;
-    toRow.textContent = Math.min(page * limit, total);
+    // проверка на отсутствие результата и сброс строк до 0
+    if (total === 0) {
+      fromRow.textContent = 0;
+      toRow.textContent = 0;
+    } else {
+      fromRow.textContent = (page - 1) * limit + 1;
+      toRow.textContent = Math.min(page * limit, total);
+    }
+
     totalRows.textContent = total;
   };
 
