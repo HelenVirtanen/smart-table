@@ -39,7 +39,6 @@ function collectState() {
 async function render(action) {
   let state = collectState(); // состояние полей из таблицы
   let query = {};
-  // @todo: использование
   query = applySearching(query, state, action);
   query = applyFiltering(query, state, action);
   query = applySorting(query, state, action);
