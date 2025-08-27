@@ -64,7 +64,7 @@ const sampleTable = initTable(
 const applySearching = initSearching("search");
 
 const { applyFiltering, updateIndexes } = initFiltering(sampleTable.filter.elements, {
-    searchBySeller: indexes.sellers
+    searchBySeller: []
   });
 
 const applySorting = initSorting([

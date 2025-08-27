@@ -51,9 +51,9 @@ export const initPagination = (
     );
 
     // переносим код, который делали под @todo: #2.5 (обратите внимание, что rowsPerPage заменена на limit)
-    fromRow.textContent = (page - 1) * rowsPerPage + 1;
-    toRow.textContent = Math.min(page * rowsPerPage, data.length);
-    totalRows.textContent = data.length;
+    fromRow.textContent = (page - 1) * limit + 1;
+    toRow.textContent = Math.min(page * limit, total);
+    totalRows.textContent = total;
   };
 
   return {
