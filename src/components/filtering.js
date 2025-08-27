@@ -27,7 +27,7 @@ export function initFiltering(elements, indexes) {
       }
     }
 
-    // @todo: #4.5 — отфильтровать данные используя компаратор
+    // @todo: #4.5 — отфильтровать данные
     const filter = {};
     Object.keys(elements).forEach((key) => {
       if (elements[key]) {
